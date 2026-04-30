@@ -1,0 +1,61 @@
+/* GLOBAL STYLES */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+/* CONTAINER */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+    color: #111;
+}
+
+/* PARAGRAPHS */
+p {
+    line-height: 1.6;
+}
+
+/* PROJECT BOX */
+.project {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+/* LINKS */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* LISTS */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
