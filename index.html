@@ -1,118 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dua | ML Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+/* CENTERED LAYOUT */
+.container {
+    width: 85%;
+    max-width: 900px;
+    margin: auto;
+    padding: 50px 20px;
+}
 
-<body>
+/* MAIN TITLE */
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #111;
+}
 
-    <!-- HOME SECTION -->
-    <header class="container">
-        <h1>Dua – ML Developer</h1>
-        <h1 style="color:red;">TEST CSS WORKING</h1>
-        <p>
-            I build machine learning and data analysis solutions that turn raw data into actionable business insights.
-        </p>
-    </header>
+/* SECTION HEADINGS */
+h2 {
+    margin-top: 60px;
+    font-size: 24px;
+    border-left: 5px solid #2563eb;
+    padding-left: 12px;
+}
 
-    <!-- ABOUT SECTION -->
-    <section class="container">
-        <h2>About Me</h2>
-        <p>
-            I specialize in predictive modeling, data analysis, and visualization using Python and machine learning
-            libraries like Pandas, NumPy, and Scikit-learn.
-            My focus is on solving real-world data problems with clean and efficient solutions.
-        </p>
-    </section>
+/* TEXT */
+p {
+    line-height: 1.7;
+    color: #444;
+    font-size: 16px;
+}
 
-<!-- PROJECTS SECTION -->
-<section class="container">
-    <h2>Projects</h2>
+/* PROJECT CARDS (IMPORTANT UPGRADE) */
+.project {
+    background: #ffffff;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border-left: 5px solid #2563eb;
+    transition: 0.2s ease;
+}
 
-    <!-- PROJECT 1 -->
-    <div class="project">
-        <h3>Titanic Survival Prediction</h3>
-        <p>
-            Built a machine learning classification model to predict passenger survival using demographic and ticket data.
-        </p>
-        <p><strong>Type:</strong> Classification (Machine Learning)</p>
-        <p><strong>Tools:</strong> Python, Pandas, Scikit-learn</p>
-        <p><strong>Result:</strong> 81% Accuracy</p>
-        <a href="https://github.com/DuaZahraAI/Titanic-Survival-Prediction" target="_blank">View Project</a>
-    </div>
+/* HOVER EFFECT */
+.project:hover {
+    transform: translateY(-3px);
+}
 
-    <!-- PROJECT 2 -->
-    <div class="project">
-        <h3>Sales Forecasting Model</h3>
-        <p>
-            Developed a regression model to predict future sales trends based on historical business data.
-        </p>
-        <p><strong>Type:</strong> Regression (Machine Learning)</p>
-        <p><strong>Tools:</strong> Python, Pandas, Scikit-learn</p>
-        <p><strong>Result:</strong> Trend-based sales prediction model</p>
-        <a href="https://github.com/DuaZahraAI/Sales-Forecasting-Analysis" target="_blank">View Project</a>
-    </div>
+/* LINKS */
+a {
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+}
 
-    <!-- PROJECT 3 -->
-    <div class="project">
-        <h3>Customer Churn Data Cleaning & Preprocessing</h3>
-        <p>
-            Performed data cleaning and preprocessing on a customer churn dataset including missing values handling, encoding categorical variables, and preparing data for ML models.
-        </p>
-        <p><strong>Type:</strong> Data Preprocessing</p>
-        <p><strong>Tools:</strong> Python, Pandas, NumPy</p>
-        <p><strong>Result:</strong> Clean, model-ready dataset</p>
-        <a href="https://github.com/DuaZahraAI/Customer-Churn-Prediction" target="_blank">View Project</a>
-    </div>
+a:hover {
+    text-decoration: underline;
+}
 
-    <!-- PROJECT 4 -->
-    <div class="project">
-        <h3>Customer Churn Analysis & Visualization</h3>
-        <p>
-            Analyzed customer churn data to identify patterns and created visual insights using charts and graphs to understand customer behavior.
-        </p>
-        <p><strong>Type:</strong> Data Analysis & Visualization</p>
-        <p><strong>Tools:</strong> Python, Matplotlib, Seaborn</p>
-        <p><strong>Result:</strong> Business insights through visualization</p>
-        <a href="https://github.com/DuaZahraAI/Customer-Churn-Prediction" target="_blank">View Project</a>
-    </div>
+/* SKILLS LIST */
+ul {
+    padding-left: 20px;
+}
 
-</section>
-    <!-- SERVICES SECTION -->
-    <section class="container">
-        <h2>Services</h2>
-        <ul>
-            <li>Machine Learning Prediction Models</li>
-            <li>Data Analysis & Reporting</li>
-            <li>Data Visualization Dashboards</li>
-            <li>Dataset Cleaning & Preprocessing</li>
-        </ul>
-    </section>
+ul li {
+    margin-bottom: 6px;
+}
 
-    <!-- SKILLS SECTION -->
-    <section class="container">
-        <h2>Skills</h2>
-        <p>
-            Python | Pandas | NumPy | Scikit-learn | Matplotlib | Seaborn | Machine Learning
-        </p>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section class="container">
-        <h2>Contact</h2>
-        <p>Email: duazahrazahra344@email.com</p>
-        <p>GitHub: https://github.com/DuaZahraAI</p>
-        <p>LinkedIn: https://linkedin.com/in/dua-zahra-ai</p>
-    </section>
-
-    <footer class="container">
-        <p>© 2026 Dua | ML Developer Portfolio</p>
-    </footer>
-
-</body>
-
-</html>
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    color: #777;
+}
