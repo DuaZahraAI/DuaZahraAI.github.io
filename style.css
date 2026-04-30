@@ -1,54 +1,72 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f7fb;
-    color: #222;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* PAGE WRAPPER */
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* MAIN CONTAINER */
 .container {
     width: 85%;
     max-width: 900px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
-/* HEADINGS */
+/* HERO TITLE */
 h1 {
-    font-size: 36px;
+    font-size: 42px;
+    color: #111;
     margin-bottom: 10px;
+}
+
+/* SECTION HEADINGS */
+h2 {
+    font-size: 26px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 5px solid #2563eb;
     color: #111;
 }
 
-h2 {
-    margin-top: 50px;
-    font-size: 26px;
-    border-left: 4px solid #2563eb;
-    padding-left: 10px;
-}
-
-/* TEXT */
+/* PARAGRAPHS */
 p {
-    line-height: 1.7;
-    color: #333;
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
 }
 
 /* PROJECT CARDS */
 .project {
-    background: white;
-    padding: 20px;
+    background: #ffffff;
+    padding: 22px;
     margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    border-left: 4px solid #2563eb;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #2563eb;
+    transition: all 0.2s ease-in-out;
+}
+
+/* HOVER EFFECT */
+.project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 /* LINKS */
 a {
+    display: inline-block;
+    margin-top: 10px;
     color: #2563eb;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
 }
 
 a:hover {
@@ -57,13 +75,32 @@ a:hover {
 
 /* LISTS */
 ul {
-    padding-left: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 6px 0;
+    color: #444;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 30px;
-    color: #777;
+    padding: 40px 0;
+    margin-top: 50px;
     font-size: 14px;
+    color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .container {
+        width: 92%;
+        padding: 30px 15px;
+    }
 }
