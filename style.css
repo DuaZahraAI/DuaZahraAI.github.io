@@ -1,33 +1,45 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
+/* =========================
+   GLOBAL FIX (CRITICAL)
+========================= */
+
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+}
+
+/* =========================
+   BODY
+========================= */
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: #f4f7fb;
     color: #1f2937;
     line-height: 1.7;
-    overflow-x: hidden;
 }
 
-/* PREVENT HORIZONTAL SCROLL (GLOBAL FIX) */
-html {
-    overflow-x: hidden;
-}
-
-/* MAIN CONTAINER */
+/* =========================
+   MAIN CONTAINER
+========================= */
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1100px;
     margin: auto;
     padding: 60px 20px;
+    box-sizing: border-box;
 }
 
-/* HERO SECTION */
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
     text-align: center;
     padding: 100px 20px 80px;
@@ -47,7 +59,9 @@ html {
     color: #4b5563;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 nav {
     width: 100%;
     background: #ffffff;
@@ -62,6 +76,7 @@ nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 0 20px;
 }
 
@@ -75,20 +90,18 @@ nav ul {
     display: flex;
     gap: 25px;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
     color: #374151;
     text-decoration: none;
     font-weight: 500;
-    transition: 0.2s;
 }
 
-nav ul li a:hover {
-    color: #2563eb;
-}
-
-/* SECTION HEADINGS */
+/* =========================
+   SECTIONS
+========================= */
 section {
     margin-top: 80px;
 }
@@ -111,21 +124,14 @@ h2::after {
     border-radius: 5px;
 }
 
-/* PARAGRAPHS */
 p {
     font-size: 16px;
     color: #4b5563;
 }
 
-/* PROJECT GRID */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 35px;
-}
-
-/* PROJECT CARDS */
+/* =========================
+   PROJECT CARDS
+========================= */
 .project {
     background: #ffffff;
     padding: 28px;
@@ -133,24 +139,35 @@ p {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
     transition: 0.3s ease;
     border: 1px solid #e5e7eb;
+    overflow: hidden;
 }
 
 .project:hover {
     transform: translateY(-6px);
-    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
 }
 
-.project h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
-    color: #111827;
+/* =========================
+   IMAGES (FINAL FIX)
+========================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-.project p {
-    margin-bottom: 15px;
+/* FORCE SAFE IMAGE BEHAVIOR */
+.project img,
+.app-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
-/* BUTTONS & LINKS */
+/* =========================
+   BUTTONS
+========================= */
 a {
     text-decoration: none;
 }
@@ -162,19 +179,15 @@ a {
     color: #ffffff;
     border-radius: 10px;
     font-weight: 600;
-    transition: 0.3s;
 }
 
-.btn:hover {
-    background: #1d4ed8;
-}
-
-/* SKILLS LIST */
+/* =========================
+   SKILLS
+========================= */
 .skills {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-top: 20px;
 }
 
 .skills span {
@@ -183,23 +196,21 @@ a {
     padding: 10px 16px;
     border-radius: 30px;
     font-size: 14px;
-    font-weight: 600;
 }
 
-/* CONTACT SECTION */
+/* =========================
+   CONTACT
+========================= */
 .contact-box {
     background: #ffffff;
     padding: 35px;
     border-radius: 18px;
-    margin-top: 30px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-.contact-box p {
-    margin-bottom: 12px;
-}
-
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
     margin-top: 100px;
     padding: 30px 0;
@@ -208,21 +219,9 @@ footer {
     color: #6b7280;
 }
 
-/* IMAGE RESPONSIVENESS FIX (MOST IMPORTANT) */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* OPTIONAL: Make images look cleaner */
-.project img,
-.app-card img {
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
-/* RESPONSIVE */
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
 
     .hero h1 {
@@ -238,16 +237,12 @@ img {
         gap: 15px;
     }
 
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     h2 {
         font-size: 26px;
     }
 
     .container {
         width: 94%;
+        padding: 40px 15px;
     }
 }
