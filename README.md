@@ -75,8 +75,9 @@ My goal is to help clients turn raw data into meaningful insights and predictive
 If you would like to work with me or discuss a project:
 
 - GitHub: https://github.com/DuaZahraAI
-- LinkedIn: (add your link here)
-- Fiverr / Upwork: (add your links here)
+- LinkedIn: (https://www.linkedin.com/in/dua-zahra-ai/)
+- Fiverr : (https://www.fiverr.com/duaseller?public_mode=true)
+-  Upwork: (https://www.upwork.com/freelancers/~014292aae9fc562ba1?viewMode=1)
 
 ---
 
