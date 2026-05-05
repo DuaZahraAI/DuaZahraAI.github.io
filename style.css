@@ -11,6 +11,12 @@ body {
     background: #f4f7fb;
     color: #1f2937;
     line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* PREVENT HORIZONTAL SCROLL (GLOBAL FIX) */
+html {
+    overflow-x: hidden;
 }
 
 /* MAIN CONTAINER */
@@ -200,6 +206,20 @@ footer {
     text-align: center;
     font-size: 14px;
     color: #6b7280;
+}
+
+/* IMAGE RESPONSIVENESS FIX (MOST IMPORTANT) */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* OPTIONAL: Make images look cleaner */
+.project img,
+.app-card img {
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 /* RESPONSIVE */
