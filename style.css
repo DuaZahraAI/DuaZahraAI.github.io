@@ -8,21 +8,20 @@
 }
 
 /* =========================
-   GLOBAL FIX (IMPORTANT)
+   GLOBAL
 ========================= */
 html, body {
     overflow-x: hidden;
     width: 100%;
 }
 
-/* =========================
-   BODY
-========================= */
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
     background: #f4f7fb;
     color: #1f2937;
     line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* =========================
@@ -30,9 +29,16 @@ body {
 ========================= */
 .container {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
-    padding: 60px 20px;
+    padding: 70px 20px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+    margin-bottom: 60px;
 }
 
 /* =========================
@@ -72,36 +78,46 @@ p {
 ========================= */
 .hero {
     text-align: center;
-    padding: 100px 20px 80px;
+    padding: 110px 20px 90px;
 }
 
 .hero h1 {
-    font-size: 52px;
-    margin-bottom: 15px;
+    font-size: 54px;
+    font-weight: 700;
+    letter-spacing: -1px;
 }
 
 .hero p {
     font-size: 18px;
-    max-width: 700px;
-    margin: auto;
+    max-width: 650px;
+    margin: 15px auto;
+    color: #6b7280;
 }
 
 /* =========================
-   PROJECT CARDS
+   CARDS
 ========================= */
 .project,
 .app-card,
 .service {
     background: #ffffff;
-    padding: 28px;
-    border-radius: 18px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    padding: 30px;
+    border-radius: 16px;
     border: 1px solid #e5e7eb;
-    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover,
+.app-card:hover,
+.service:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
 }
 
 /* =========================
-   IMAGES (CRITICAL FIX)
+   IMAGES
 ========================= */
 img {
     max-width: 100%;
@@ -109,11 +125,12 @@ img {
     display: block;
 }
 
-/* extra safety for cards */
 .project img,
 .app-card img {
+    width: 100%;
     max-width: 100%;
-    height: auto;
+    max-height: 400px;
+    object-fit: contain;
     margin-top: 10px;
     border-radius: 10px;
 }
@@ -131,15 +148,22 @@ a:hover {
 }
 
 /* =========================
-   BUTTON (CONTACT)
+   BUTTON
 ========================= */
 .contact-btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 16px;
+    margin-top: 15px;
+    padding: 12px 18px;
     background: #2563eb;
     color: white;
-    border-radius: 8px;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.contact-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
 }
 
 /* =========================
@@ -152,21 +176,25 @@ a:hover {
 }
 
 .skills span {
-    background: #dbeafe;
+    background: #eff6ff;
     color: #1d4ed8;
     padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
 }
 
 /* =========================
-   NAV (SAFE)
+   NAV
 ========================= */
 nav {
     width: 100%;
-    background: #fff;
+    background: #ffffff;
     padding: 15px 0;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav .container {
